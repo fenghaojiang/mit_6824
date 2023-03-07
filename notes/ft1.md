@@ -17,4 +17,18 @@ client 2 发送 set 请求到 Server 2
 第二种不正确的返回结果就叫做 Split Brain 脑裂  
 
 
+### Majority Votes  
+
+2 of 3  
+如果你有 2f+1 台机器，就可以容忍 f 台机器宕机/停机   
+
+Raft 有一个特点比其他的特点重要：  
+上次选举的 Majority 必然与这次选举的 Majority 有重叠的部分（两个大于 1/2 的集合必然存在交集）   
+新产生的 Leader 都可以保证知道上一任 Leader 的 term   
+
+
+
+
+
+
 
